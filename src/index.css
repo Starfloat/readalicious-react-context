@@ -1,0 +1,327 @@
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+/* Utilities */
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  width: 600px;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 2%;
+}
+
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* App Header & Navigation */
+.appHeader {
+  background-color: #030303;
+  color: white;
+  padding: 25px 0;
+}
+
+.appNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appNav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.appNav .logo h1 {
+  margin-left: 10px;
+}
+
+.navbar {
+  margin-left: 10rem;
+  font-size: 1.8rem;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* Book Cover */
+.coverImage {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coverImage img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.coverPlaceholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: darkgray;
+}
+
+.bookDescription {
+  margin-top: auto;
+  width: 100%;
+  line-height: 1.8rem;
+}
+
+.bookDescription h5 {
+  font-size: 1.3rem;
+}
+
+.bookDescription p {
+  font-size: 1.3rem;
+}
+
+/* Book Card */
+.bookCover {
+  padding: 5%;
+  height: 290px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.bookCover:hover {
+  background-color: lightgray;
+}
+
+/* Book Search */
+.bookSearch .control {
+  text-align: center;
+}
+
+.bookSearch .control input {
+  font-size: 1.6rem;
+  padding: 15px 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 25px 0;
+  border: 1px solid lightgray;
+}
+
+.bookSearch .control input:focus {
+  outline: none;
+}
+
+/* Favorites */
+.favoritesSection {
+  padding-top: 30px;
+}
+
+.favoritesSection h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.countBadge {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 25%;
+  font-size: 1.5rem;
+}
+
+/* Search Results */
+.searchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  justify-content: space-between;
+  grid-gap: 4px;
+}
+
+.feedback {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+/* Book Detail */
+.bookDetail {
+  min-height: 500px;
+}
+
+.bookIntro {
+  display: flex;
+  padding: 15px 0;
+}
+
+.bookIntro .coverImage {
+  margin-right: 20px;
+  max-width: 150px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3%;
+}
+
+.bookIntro > div {
+  flex: 1;
+}
+
+.bookAuthors {
+  font-size: 1.5rem;
+}
+
+.bookRating i {
+  font-size: 5rem;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+.bookCategories {
+  padding: 20px 0;
+}
+
+.bookCategories li {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 15px;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 5%;
+  font-size: 1.5rem;
+}
+
+.bookOverview {
+  padding: 10px 0;
+  border: 1px solid lightgray;
+  border-right: none;
+  border-left: none;
+}
+
+.bookOverview p {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  overflow: scroll;
+  height: 150px;
+}
+
+.bookActions {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookActions button,
+.bookActions a {
+  width: 25%;
+  padding: 8px 0;
+  margin-right: 5px;
+  font-size: 1.7rem;
+  border: none;
+  background-color: #3a4e48;
+  border-radius: 3%;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.favIcon,
+button:hover .unfavIcon {
+  color: red;
+}
+
+.unfavIcon,
+button:hover .favIcon {
+  color: gray;
+}
